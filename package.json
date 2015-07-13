@@ -17,6 +17,7 @@
   },
   "dependencies": {
       "react": "~0.13",
-      "zingchart": ">=2.1.2"
+      "zingchart": ">=2.1.2",
+      "zingchart-react" : "^1.0.1"
   }
 }

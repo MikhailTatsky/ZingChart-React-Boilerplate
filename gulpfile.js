@@ -15,12 +15,12 @@ gulp.task('build', function(){
     .bundle()
     .pipe(source('build.min.js'))
     .pipe(streamify(uglify('build.min.js')))
-    .pipe(gulp.dest('dist/build'));
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('replaceHTML', function(){
   gulp.src('src/index.html')
-    .pipe(htmlreplace({'js': 'build/build.min.js'}))
+    .pipe(htmlreplace({'js': 'build.min.js'}))
     .pipe(gulp.dest('dist'));
 });
 

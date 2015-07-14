@@ -36,8 +36,107 @@ var myValues4 = [
     { text : "Fourth Slice", values : [40] },
 ];
 
-React.render(<LineChart id="chart1-1" height="300" width="600" series={myValues1} legend="true" theme="slate" title="Slate"/>, document.getElementById('component-1'));
-React.render(<BarChart id="chart1-2" height="300" width="600" series={myValues2} legend="true" theme="light" title="Light"/>, document.getElementById('component-2'));
-React.render(<AreaChart id="chart1-3" height="300" width="600" series={myValues1} legend="true" theme="dark" title="Dark"/>, document.getElementById('component-3'));
-React.render(<PieChart id="chart1-4" height="300" width="600" series={myValues4} legend="true" theme="light" title="Light"/>, document.getElementById('component-4'));
-React.render(<ScatterChart id="chart1-5" height="300" width="600" series={myValues3} legend="true" theme="dark" title="Dark"/>, document.getElementById('component-5'));
+
+////////////////////////////////////////////
+//Core Component Configurations
+////////////////////////////////////////////
+//Used for the core component. You can utilize zingchart's full library through the core component.
+var myDataSimple = {
+ 	type: "bar",
+	series : [
+        {values : [35,42,67,89,25,34,67,85]}
+	]
+};
+
+var myDataComplex = {
+    type: "area",
+    backgroundColor: "#4DAE50",
+    plot: {
+        aspect: "spline",
+        lineColor: "#FFF",
+        backgroundColor: "#419D45",
+        alphaArea: 1,
+        marker: {
+            visible: "false"
+        },
+        paddingLeft: 0,
+        paddingRight: 0,
+        paddingBottom: 0,
+        paddingTop: 0,
+    },
+    plotarea: {
+        margin: "40 20 40 40",
+    },
+    tooltip: {
+        visible: false,
+        callout: 1,
+        placement: "vertical"
+    },
+    crosshairX: {
+        marker: {
+            visible: false
+        },
+        lineColor: "none",
+        scaleLabel: {
+            visible: false
+        },
+        plotLabel: {
+            multiple: true,
+            fontSize: "10px",
+            color: "#000",
+            backgroundColor: "#ffffff",
+            callout: true,
+            alpha: 0.8,
+            calloutPosition: "bottom",
+            shadow: 1,
+            placement: "node-top",
+            borderRadius: 4,
+            padding: 6,
+            rules: [{
+                "rule": "%p == 0",
+                "visible": false
+            }]
+        }
+    },
+    scaleX: {
+        lineWidth: 1,
+        lineColor: "white",
+        guide: {
+            visible: "false"
+        },
+        tick: {
+            lineWidth: 1,
+            lineColor: "white"
+        },
+        item: {
+            color: "white"
+        }
+    },
+    scaleY: {
+        lineWidth: 1,
+        lineColor: "white",
+        guide: {
+            lineStyle: "solid",
+            lineColor: "white"
+        },
+        tick: {
+            lineWidth: 1,
+            lineColor: "white"
+        },
+        item: {
+            color: "white"
+        }
+    },
+    series: [{
+        values: [35, 80, 67, 89, 25, 34, 67, 85]
+    }]
+};
+
+React.render(<ZingChart id="chart0-1" height="300" width="600" data= {myDataSimple}/>, document.getElementById('component-0-1'));
+React.render(<ZingChart id="chart0" height="300" width="600" data= {myDataComplex}/>, document.getElementById('component-0'));
+
+React.render(<LineChart id="chart1" height="300" width="600" series={myValues1} legend="true" theme="slate" title="Slate"/>, document.getElementById('component-1'));
+React.render(<BarChart id="chart2" height="300" width="600" series={myValues2} legend="true" theme="light" title="Light"/>, document.getElementById('component-2'));
+React.render(<AreaChart id="chart3" height="300" width="600" series={myValues1} legend="true" theme="dark" title="Dark"/>, document.getElementById('component-3'));
+React.render(<PieChart id="chart4" height="300" width="600" series={myValues4} legend="true" theme="light" title="Light"/>, document.getElementById('component-4'));
+React.render(<ScatterChart id="chart5" height="300" width="600" series={myValues3} legend="true" theme="dark" title="Dark"/>, document.getElementById('component-5'));

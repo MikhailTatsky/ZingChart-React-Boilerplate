@@ -132,11 +132,11 @@ var myDataComplex = {
     }]
 };
 
-React.render(<ZingChart id="chart0-1" height="300" width="600" data= {myDataSimple}/>, document.getElementById('component-0-1'));
-React.render(<ZingChart id="chart0" height="300" width="600" data= {myDataComplex}/>, document.getElementById('component-0'));
+React.render(<ZingChart id="chart1" height="300" width="600" data= {myDataSimple}/>, document.getElementById('component-1'));
+React.render(<ZingChart id="chart2" height="300" width="600" data= {myDataComplex}/>, document.getElementById('component-2'));
 
-React.render(<LineChart id="chart1" height="300" width="600" series={myValues1} legend="true" theme="slate" title="Slate"/>, document.getElementById('component-1'));
-React.render(<BarChart id="chart2" height="300" width="600" series={myValues2} legend="true" theme="light" title="Light"/>, document.getElementById('component-2'));
-React.render(<AreaChart id="chart3" height="300" width="600" series={myValues1} legend="true" theme="dark" title="Dark"/>, document.getElementById('component-3'));
-React.render(<PieChart id="chart4" height="300" width="600" series={myValues4} legend="true" theme="light" title="Light"/>, document.getElementById('component-4'));
-React.render(<ScatterChart id="chart5" height="300" width="600" series={myValues3} legend="true" theme="dark" title="Dark"/>, document.getElementById('component-5'));
+React.render(<LineChart id="chart3" height="300" width="600" series={myValues1} legend="true" theme="slate" title="Slate"/>, document.getElementById('component-3'));
+React.render(<BarChart id="chart4" height="300" width="600" series={myValues2} legend="true" theme="light" title="Light"/>, document.getElementById('component-4'));
+React.render(<AreaChart id="chart5" height="300" width="600" series={myValues1} legend="true" theme="dark" title="Dark"/>, document.getElementById('component-5'));
+React.render(<PieChart id="chart6" height="300" width="600" series={myValues4} legend="true" theme="light" title="Light"/>, document.getElementById('component-6'));
+React.render(<ScatterChart id="chart7" height="300" width="600" series={myValues3} legend="true" theme="dark" title="Dark"/>, document.getElementById('component-7'));
